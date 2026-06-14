@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  web:
+    image: ghcr.io/YOUR_GITHUB_USERNAME/todoflow-cicd:latest
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
