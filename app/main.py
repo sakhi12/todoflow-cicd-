@@ -4,6 +4,11 @@ app = Flask(__name__)
 todos = []
 
 
+@app.route("/")
+def home():
+    return jsonify({"status": "TodoFlow CI/CD is running!"})
+
+
 @app.route("/todos", methods=["GET"])
 def get_todos():
     return jsonify(todos)
