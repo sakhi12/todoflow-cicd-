@@ -39,3 +39,4 @@ def test_generated_fields(client):
 def test_invalid_request(client):
     res = client.post("/todos", json={})
     assert res.status_code == 400
+    
