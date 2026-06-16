@@ -33,9 +33,10 @@ def test_generated_fields(client):
     data = res.get_json()
     assert "id" in data
     assert "done" in data
-    assert data["done"] == False
+assert data["done"] is False
 
 
 def test_invalid_request(client):
     res = client.post("/todos", json={})
     assert res.status_code == 400
+
